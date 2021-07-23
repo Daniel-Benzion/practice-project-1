@@ -5,7 +5,6 @@ import UsersList from './components/Users/UsersList';
 function App() {
 
   const [users, setUsers] = useState([]);
-
   const addUserHandler = (enteredUserData) => {
 
     const userData = {
@@ -17,10 +16,9 @@ function App() {
     })
   }
 
-
   return (
     <div>
-      <AddUser onAddUser={addUserHandler}/>
+      <AddUser onAddUser={addUserHandler} />
       <UsersList users={users}/>
     </div>
   );
