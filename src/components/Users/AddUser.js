@@ -30,7 +30,7 @@ const AddUser = (props) => {
       age: enteredAge
     }
 
-    props.onSaveUserData(userData);
+    props.onAddUser(userData);
     setEnteredName('');
     setEnteredAge('');
   };

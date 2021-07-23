@@ -10,7 +10,7 @@ function App() {
 
     const userData = {
       ...enteredUserData,
-      id: Math.random.toString()
+      id: Math.random().toString()
     }
     setUsers((prevUserData) => {
       return [userData, ...prevUserData];
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <AddUser onSaveUserData={addUserHandler}/>
+      <AddUser onAddUser={addUserHandler}/>
       <UsersList users={users}/>
     </div>
   );
