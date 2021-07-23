@@ -7,7 +7,7 @@ import Button from "../UI/Button";
 const AddUser = (props) => {
 
   const [enteredName, setEnteredName] = useState('');
-  const [enteredAge, setEnteredAge] = useState(-1);
+  const [enteredAge, setEnteredAge] = useState('');
 
 
 
@@ -30,17 +30,17 @@ const AddUser = (props) => {
 
     props.onSaveUserData(userData);
     setEnteredName('');
-    setEnteredAge(-1);
+    setEnteredAge('');
   };
 
   return (
     <Card className={styles.input}>
       <form onSubmit={addUserHandler}>
         <label htmlFor="username">Username</label>
-        <input id="username" type="text" onChange={nameChangeHandler}></input>
+        <input id="username" type="text" onChange={nameChangeHandler} value={enteredName} ></input>
 
         <label htmlFor="age">Age (Years)</label>
-        <input id="age" type="number" onChange={ageChangeHandler}></input>
+        <input id="age" type="number" onChange={ageChangeHandler} value={enteredAge} ></input>
 
         <Button type="submit">Add User</Button>
       </form>
