@@ -23,6 +23,8 @@ const AddUser = (props) => {
   const addUserHandler = (event) => {
     event.preventDefault();
 
+    if (enteredName.trim().length === 0 || enteredAge.trim().length < 1) return;
+
     const userData = {
       name: enteredName,
       age: enteredAge
